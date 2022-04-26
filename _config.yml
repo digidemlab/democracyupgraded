@@ -1,0 +1,105 @@
+---
+title: Digidem Lab
+name: Digidem Lab
+timezone: CET
+collections:
+  crew:
+    title: Crew
+    output: false
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+    lang: sv
+- scope:
+    path: en
+    type: pages
+  values:
+    layout: page
+    lang: en
+- scope:
+    path: ''
+    type: crew
+  values:
+    lang: sv
+email: admin@digidemlab.org
+baseurl:
+# url: https://digidemlab.org
+author: Digidem Lab
+twitter:
+  username: digidemlab
+facebook:
+  publisher: digidemlab
+logo: "/assets/logotyp.png"
+social:
+  links:
+  - https://twitter.com/digidemlab
+  - https://www.facebook.com/digidemlab
+  - https://www.instagram.com/digidemlab/
+  - https://github.com/digidemlab
+github_username: p-jo
+repository: digidemlab/digidemlab.github.io
+plugins:
+- jemoji
+- jekyll-seo-tag
+- jekyll-menus
+#- jekyll-feed
+emptyArray: []
+t:
+  sv:
+    mission: Digidem Lab erbjuder tjänster och utvecklar metoder och verktyg för framtidens
+      deltagande demokrati.
+    language: Svenska
+    member:
+    - title: Rädda Barnen Göteborg
+      image: "/assets/images/logo-raddabarnen.jpg"
+      url: https://www.raddabarnen.se/medlem-och-volontar/lokalforening/vast/vastra-gotalands-lan/goteborg/
+    - title: Göteborgs stift
+      image: "/assets/images/logo-gbgstift.png"
+      url: https://www.svenskakyrkan.se/goteborgsstift
+    - title: Navet i Bergsjön
+      image: "/assets/images/logo-navet.png"
+      url: https://navet.org/
+    - title: Agera Göteborg
+      image: "/assets/images/logo-agera.jpg"
+      url: https://www.facebook.com/ageragoteborg/
+    partner-text: '<strong>Community organising för lokalt ledarskap</strong> är ett projekt från <a href="https://digidemlab.org">Digidem Lab</a> med finansiering från Postkodstiftelsen, i samarbete med följande organisationer:'
+    project-link: Läs mer om uppdraget
+    more-projects: Fler uppdrag
+    more-services: Läs mer om våra tjänster
+    news: Nyheter
+    more-news: Fler nyheter
+    read-more: Läs mer
+    contact-title: Vill du veta mer?
+    contact-text: ' '
+  en:
+    mission: Digidem Lab offers services and develops platforms for the participatory
+      democracy of the future.
+    language: English
+    member:
+    - title: Board member of Global Participatory Budgeting Hub.
+      image: "/assets/images/logo-pbp.png"
+      url: https://www.participatorybudgeting.org/globalpbhub/
+    - title: Co-founder and board member of Consul Democracy Foundation.
+      image: "/assets/images/logo-consul.png"
+      url: https://consulproject.org
+    - title: Developing new methods for citizen participation with the support of
+        Vinnova.
+      image: "/assets/images/logo-vinnova.png"
+      url: https://www.vinnova.se/en/
+    project-link: Read about the project
+    more-projects: More projects
+    more-services: Read more about our services
+    news: News
+    more-news: More news
+    read-more: Read more
+    contact-title: Get in touch!
+    contact-text: Get in touch to discuss ideas for projects or cooperation.
