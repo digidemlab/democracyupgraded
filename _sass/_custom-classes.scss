@@ -139,6 +139,12 @@ p > a:hover {
   line-height: 1.07;
 }
 
+.hero .subtitle.is-size-3-fullhd {
+  @include from($fullhd) {
+    font-size: 3.5rem !important
+  }
+}
+
 .title:not(:last-child),
 .subtitle:not(:last-child) {
   //@include until($widescreen) {
