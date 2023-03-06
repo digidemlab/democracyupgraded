@@ -45,19 +45,19 @@ layout: default
   </div>
 </article>
 
-
-<hr>
-<div class="container">
-  <div class="columns is-centered">
-    <div class="column is-7-widescreen has-text-centered">
-      <h2 class="title is-6 is-size-4-tablet is-size-3-widescreen section-title">{{site.t[page.lang].more-projects}}</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-7-widescreen has-text-centered">
+        <h2 class="title is-6 is-size-4-tablet is-size-3-widescreen section-title">{{site.t[page.lang].more-projects}}</h2>
+      </div>
+    </div>
+    <div class="columns partners is-mobile is-multiline is-vcentered is-centered is-variable is-tablet-8">
+      {% for item in site.posts %}
+        {% include teaser-client.html %}
+      {% endfor %}
     </div>
   </div>
-  <div class="columns partners is-mobile is-multiline is-vcentered is-centered is-variable is-tablet-8">
-    {% for item in site.posts %}
-      {% include teaser-client.html %}
-    {% endfor %}
-  </div>
-</div>
+</section>
 
 {% include footer.html %}
