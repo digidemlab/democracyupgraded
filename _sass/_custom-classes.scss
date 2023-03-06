@@ -97,7 +97,7 @@ p > a:hover {
 
 
 .hero .title {
-  font-size: 2.375rem;
+  font-size: 3rem;
   line-height: 0.95;
   letter-spacing: -0.05em;
 
@@ -106,11 +106,11 @@ p > a:hover {
   }
 
   @include from(550px) {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   @include from($desktop) {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 
   @include from($widescreen) {
