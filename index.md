@@ -1,11 +1,10 @@
 ---
-title: 'Community Organising '
+title: Demokrati, deltagande och transparens
 image: "/uploads/community organising (1).jpg"
 thumbnail: ''
 menu: services
-excerpt: Community Organising för lokalt ledarskap
-ingress-text: Utveckla din egen och andras förmåga att organisera för att skapa den
-  förändring ni vill se!
+excerpt: Organisering, deltagande och demokrati
+ingress-text: Organisering, deltagande och demokrati
 links:
 - title: Community Organising Forum
   url: https://forum.communityorganising.se
@@ -14,9 +13,4 @@ links:
 contact: true
 lang: sv
 layout: start
----
-
-Utbildningsprogrammet i Community Organising 2022 för lokalt ledarskap finns till för att skapa ett rum för lärande, reflektion och utveckling inom lokal organisering för lokala organisatörer. Det gör vi genom att för första gången i Sverige erbjuda en fördjupande utbildning i det internationellt beprövade metodpaketet Community Organising. Rädda Barnen, Jordens Vänner och Svenska kyrkan stöttar med resurser och spridning. Utbildningen utvecklas tillsammans med praktiserande organisatörer i Tynnered, Bergsjön och Hjällbo. Det här är bara början!
-
-
 ---

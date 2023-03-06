@@ -1,0 +1,50 @@
+<div class="box client">
+  <div class="container">
+    <div class="columns is-multiline">
+
+      {% if page.logotype %}
+      <div class="column is-6-tablet is-4-widescreen">
+        <figure class="image image-logo">
+          <img src="{{site.baseurl}}{{page.logotype}}" alt="{{page.title}}" style="#min-height:100%">
+        </figure>
+      </div>
+      {% endif %}
+
+      <div class="column">
+        {% if page.client %}
+          <h3>{{site.t[page.lang].project-client}}</h3>
+          <p>{{page.client}}</p>
+        {% endif %}
+
+        <h3>{{site.t[page.lang].project-duration}}</h3>
+        <p>{{ page.year}}</p>
+
+        {% if page.funding %}
+          <h3>Finansiering</h3>
+          <p>{{ page.funding}}</p>
+        {% endif %}
+
+      </div>
+      <div class="column">
+        {% if page.partners %}
+          <h3>{{site.t[page.lang].project-partners}}</h3>
+          <ul>
+            {% for item in page.partners %}
+              <li>{{item}}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.links %}
+          <h3>{{site.t[page.lang].project-website}}</h3>
+          <ul>
+            {% for item in page.links %}
+              <li><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

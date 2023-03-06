@@ -13,10 +13,9 @@ layout: default
           <img src="{{site.baseurl}}{{page.image}}">
         </figure>
       {% endif %}
-      <h1 class="title is-5 is-size-4-tablet is-size-3-desktop is-size-1-widescreen is-spaced">{{page.title}}</h1>
-      <p class="subtitle is-6 is-size-3-widescreen">{{page.ingress-text}}</p>
     </div>
   </div>
+
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
     <div class="container has-text-centered">
@@ -27,45 +26,17 @@ layout: default
 
 <div id="content"></div>
 
-<article id="page" class="section is-medium page-{{page.ref}}">
+<article id="page" class="section is-medium page-{{page.ref}} page-client">
   <div class="container page">
+    <div class="columns columns-header">
+      <div class="column is-10-fullhd">
+        <h1 class="title is-5 is-size-4-tablet is-size-3-desktop is-size-1-widescreen is-spaced">{{page.title}}</h1>
+        <p class="subtitle is-6 is-size-3-widescreen">{{page.ingress-text}}</p>
+      </div>
+    </div>
 
-    {% for item in site.data.menu[page.lang].primary %}
-      {% if page.menu == item.ref and item.items %}
-        <aside class="menu">
-          <ul class="menu-list">
-            {% for item in item.items %}
-              {% if item.url %}
-                <li><a class="{% if item.url==page.url %}is-active{% endif %}" href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
-                  {% if item.items %}
-                    <ul>
-                      {% for subitem in item.items %}
-                        <li><a class="{% if subitem.url==page.url %}is-active{% endif %}" href="{{site.baseurl}}{{subitem.url}}">{{subitem.title}}</a>
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                </li>
-              {% else %}
-              </ul>
-              <p class="menu-label">{{ item.title }}</p>
-              <ul class="menu-list">
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </aside>
-      {% endif %}
-    {% endfor %}
-
-
-    {% if page.links %}
-      <aside class="facts has-text-right-widescreen">
-        <h2 class="title is-6">{{site.t[page.lang].read-more}}</h2>
-        <ul>
-          {% for item in page.links %}
-            <li><a href="{{item.url}}">{{item.title}}</a></li>
-          {% endfor %}
-        </ul>
-      </aside>
+    {% if page.year %}
+      {% include project.html %}
     {% endif %}
 
     <div class="content">
@@ -74,22 +45,19 @@ layout: default
   </div>
 </article>
 
-{% if page.services.size > 0 %}
-  {% include services.html %}
-{% endif %}
 
-{% if page.prices.size > 0 %}
-  {% include prices.html %}
-{% endif %}
-
-{% if page.contact %}
-  {% include contact.html %}
-{% endif %}
-
-{% if page.lang == 'sv' and page.is_post %}
-  {% include newsletter.html %}
-{% endif %}
-
-{% include partners.html %}
+<hr>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-7-widescreen has-text-centered">
+      <h2 class="title is-6 is-size-4-tablet is-size-3-widescreen section-title">{{site.t[page.lang].more-projects}}</h2>
+    </div>
+  </div>
+  <div class="columns partners is-mobile is-multiline is-vcentered is-centered is-variable is-tablet-8">
+    {% for item in site.posts %}
+      {% include teaser-client.html %}
+    {% endfor %}
+  </div>
+</div>
 
 {% include footer.html %}

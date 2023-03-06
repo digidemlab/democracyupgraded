@@ -1,0 +1,24 @@
+---
+title: Kontakta oss
+description: Kontakta oss för samarbeten eller projektidéer.
+ingress-text: Kontakta oss för samarbeten eller projektidéer.
+ref: contact
+image: "/uploads/civictech.jpg"
+---
+
+Kontaktadress: info@democracyupgraded.org
+
+{% assign crew=site.crew | where:"lang", page.lang %}
+
+<div class="columns">
+  <div class="column is-offset-1-widescreen is-10-widescreen">
+    <div class="columns is-desktop is-multiline">
+      {% for item in crew %}
+        <div class="column is-half-desktop teaser-crew">
+          <h3 class="title is-6">{{item.title}}</h3>
+          {{item.content}}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

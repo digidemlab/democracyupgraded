@@ -9,8 +9,9 @@ layout: default
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title lang-{{page.lang}} is-spaced">{{page.title}}</h1>
-
+      <!--
       <p class="subtitle is-6 is-size-5-desktop is-size-4-widescreen is-size-3-fullhd">{{page.ingress-text}}</p>
+      -->
     </div>
   </div>
 
@@ -24,69 +25,40 @@ layout: default
 
 <div id="content"></div>
 
-<article id="page" class="section is-medium page-{{page.ref}}">
-  <div class="container page">
+{% if page.notification %}
+  <section class="section">
+    <div class="notification is-info container">
+      <p><a href="{{site.baseurl}}{{page.notification.url}}">{{page.notification.title}}</a></p>
+    </div>
+  </section>
+{% endif %}
 
-    {% for item in site.data.menu[page.lang].primary %}
-      {% if page.menu == item.ref and item.items %}
-        <aside class="menu">
-          <ul class="menu-list">
-            {% for item in item.items %}
-              {% if item.url %}
-                <li><a class="{% if item.url==page.url %}is-active{% endif %}" href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
-                  {% if item.items %}
-                    <ul>
-                      {% for subitem in item.items %}
-                        <li><a class="{% if subitem.url==page.url %}is-active{% endif %}" href="{{site.baseurl}}{{subitem.url}}">{{subitem.title}}</a>
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                </li>
-              {% else %}
-              </ul>
-              <p class="menu-label">{{ item.title }}</p>
-              <ul class="menu-list">
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </aside>
-      {% endif %}
-    {% endfor %}
+<section class="section" id="mission-top">
+  <div class="notification is-info mission-top container">
+    <p class="subtitle is-6">{{site.t[page.lang].mission}}</p>
+  </div>
+</section>
 
 
-    {% if page.links %}
-      <aside class="facts has-text-right-widescreen">
-        <h2 class="title is-6">{{site.t[page.lang].read-more}}</h2>
-        <ul>
-          {% for item in page.links %}
-            <li><a href="{{item.url}}">{{item.title}}</a></li>
-          {% endfor %}
-        </ul>
-      </aside>
-    {% endif %}
+<section id="featured" class="section">
+  <div class="container">
 
-    <div class="content">
-      {{content}}
+    <div class="columns is-centered">
+      <div class="column is-7-widescreen has-text-centered">
+        <h2 class="title is-6 is-size-4-tablet is-size-3-widescreen section-title">Våra projekt</h2>
+        <p>Vi driver projekt för demokratiskt deltagande för allt från internationella institutioner och städer till lokalt föreningsliv.</p>
+      </div>
     </div>
   </div>
-</article>
+  <hr>
+  <div class="container">
 
-{% if page.services.size > 0 %}
-  {% include services.html %}
-{% endif %}
-
-{% if page.prices.size > 0 %}
-  {% include prices.html %}
-{% endif %}
-
-{% if page.contact %}
-  {% include contact.html %}
-{% endif %}
-
-{% if page.lang == 'sv' and page.is_post %}
-  {% include newsletter.html %}
-{% endif %}
-
-{% include partners.html %}
+    {% assign clients=site.posts | where:"lang", page.lang | sort:featured | reverse %}
+    {% assign clientfeat=clients | group_by:"featured" | sort:"name" | reverse  %}
+    {% for item in clients %}
+      {% include teaser.html %}
+    {% endfor %}
+  </div>
+</section>
 
 {% include footer.html %}

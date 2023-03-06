@@ -1,14 +1,14 @@
 sv:
   primary:
-  - title: Community Organising
-    url: /
+  - title: Om oss
+    url: /about
   secondary:
-  - title: Forum
-    url: https://forum.communityorganising.se
+  - title: Kontakt
+    url: /contact
 en:
   primary:
-  - title: Community Organising
-    url: /en
+  - title: About
+    url: /en/about
   secondary:
-  - title: Forum
-    url: https://forum.communityorganising.se
+  - title: Contact
+    url: /en/contact
