@@ -1,5 +1,5 @@
 ---
-title: Stephanie Toro
+title: Steph Toro
 date: 2020-10-13T10:18:03.000+02:00
 categories:
 - Digidem Lab
