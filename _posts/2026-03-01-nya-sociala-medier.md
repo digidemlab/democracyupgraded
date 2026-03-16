@@ -19,8 +19,8 @@ lang: sv
 ---
 
 
-Stora sociala medieplattformar som X och Facebook inte stämmer överens med föreningslivets värderingar om lika värde och respekt. Facebook tillåter nedsättande omdömen om HBTQ-personer och under Musk har X blivit en fristad för diverse antisociala och rasistiska åsikter.
-Vårt projekt handlar om att skapa en instans av Mastodon, som ersätter X (och Facebook), som en plats där folkrörelsesverige kan samlas och utbyta idéer utan att riskera exploatering av utsatta grupper.
+Stora sociala medieplattformar som X och Facebook stämmer inte överens med föreningslivets värderingar om lika värde och respekt. Facebook tillåter nedsättande omdömen om HBTQ-personer och under Musk har X blivit en fristad för diverse antisociala och rasistiska åsikter.
+Vårt projekt handlar om att utforska alternativ plattformar, där där folkrörelsesverige kan samlas och utbyta idéer utan att riskera exploatering av utsatta grupper.
 
 Målet med projektet är att föreningsliv får alternativ till X och Facebook: digitala tjänster för samarbete där deltagarna kan känna sig säkra att rasistiska och homofoba inlägg inte accepteras och där personuppgifter och känslig data inte delas med annonsörer och kommersiella aktörer.
 
